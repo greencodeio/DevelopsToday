@@ -1,0 +1,49 @@
+{
+  "name": "DevelopsToday",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "typeorm:ts": "typeorm-ts-node-commonjs",
+    "db:show:migrations": "npm run typeorm:ts -- migration:show -d typeorm-config.ts",
+    "db:run:migrations": "npm run typeorm:ts -- migration:run -d typeorm-config.ts",
+    "db:make:migration": "npm run typeorm:ts -- migration:generate -d typeorm-config.ts",
+    "db:make:rollback": "npm run typeorm:ts -- migration:revert -d typeorm-config.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/typeorm": "^11.0.0",
+    "axios": "^1.8.1",
+    "pg": "^8.13.3",
+    "reflect-metadata": "^0.2.2",
+    "rimraf": "^6.0.1",
+    "rxjs": "^7.8.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.8",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.2",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.3"
+  }
+}
