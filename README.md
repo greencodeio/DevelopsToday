@@ -5,7 +5,7 @@ This project is a back-end solution for the Country Info App test assessment. It
 Clone the Repository:
 
 git clone <repository-url>
-cd country-info-app
+cd DevelopsToday
 
 # Install Dependencies:
 
