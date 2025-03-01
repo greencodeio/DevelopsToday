@@ -45,7 +45,7 @@ This project uses TypeORM for database management. Migrations are managed via a 
 
 `npm run db:run:migrations`
 
-###Revert a Migration:
+### Revert a Migration:
 
 `npm run db:make:rollback`
 
